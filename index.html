@@ -85,9 +85,9 @@
                     Memorial Center
                 </h1>
                 <p class="para">
-                    Amrit Somani Memorial Center (ASMC) is a private, nonprofit <br> intervention center at Sarat Bose
+                    Amrit Somani Memorial Center (ASMC) is a private, nonprofit intervention center at Sarat Bose
                     Road,
-                    Kolkata, for children with <br> Autism and other neurodevelopmental disorders.
+                    Kolkata, for children with Autism and other neurodevelopmental disorders.
                 </p>
                 <ul class="aboutUl">
                     <li>
@@ -96,8 +96,8 @@
                     </li>
                     <li>
                         <span><img src="./Assets/check.png" alt=""></span>
-                        Our aim is to help these children overcome the challenges they face,<br> so that they can be
-                        integrated into mainstream schools and the <br> community. 
+                        Our aim is to help these children overcome the challenges they face, so that they can be
+                        integrated into mainstream schools and the community. 
                     </li>
                     <li>
                         <span><img src="./Assets/check.png" alt=""></span>
@@ -118,8 +118,8 @@
                     <span>PROGRAM</span>
                     <h1>Home Based</h1>
                     <p>
-                        ASMC is the only place in India that provides <br>
-                        home-based services to the people on the <br>
+                        ASMC is the only place in India that provides
+                        home-based services to the people on the
                         spectrum and their parents.
                     </p>
                     <button class="light-btn">Read More</button>
@@ -128,8 +128,8 @@
                     <span>PROGRAM</span>
                     <h1>Center Based</h1>
                     <p>
-                        There are four major behavioral interventions<br>
-                        and programs that we work on catering to the<br>
+                        There are four major behavioral interventions
+                        and programs that we work on catering to the
                         spectrum of needs of each individual.
                     </p>
                     <button class="light-btn">Read More</button>
@@ -138,8 +138,8 @@
                     <span>PROGRAM</span>
                     <h1>School Based</h1>
                     <p>
-                        There are 2 models that have been primarily<br>
-                        designed under this category: school<br>
+                        There are 2 models that have been primarily
+                        designed under this category: school
                         consultation and school shadow. 
                     </p>
                     <button class="light-btn">Read More</button>
@@ -218,7 +218,7 @@
                             <img src="./Assets/projectImg.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">VOCATIONAL CENTER</h5>
-                                <p class="card-text">We have recently opened a <br> Vocational Center (close to ASMC)
+                                <p class="card-text">We have recently opened a Vocational Center (close to ASMC)
                                     where there are
                                     specialized programs for young adults and teenagers with ASD. </p>
                                 <button href="#" class="light-blue-btn">Read More</button>
@@ -242,7 +242,7 @@
                             <img src="./Assets/projectImg.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">VOCATIONAL CENTER</h5>
-                                <p class="card-text">We have recently opened a <br> Vocational Center (close to ASMC)
+                                <p class="card-text">We have recently opened a Vocational Center (close to ASMC)
                                     where there are
                                     specialized programs for young adults and teenagers with ASD. </p>
                                 <button href="#" class="light-blue-btn">Read More</button>
@@ -367,8 +367,10 @@
     <Footer class="footer">
         <div class="top">
             <div class="left">
-                <h2>Who We Are</h2>
-                <p>Lorem Ipsum is simply dummy text of the <br> printing and typesetting industry.</p>
+                <div class="left_top">
+                    <h2>Who We Are</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
                 <div class="icons">
                     <div class="twitter">
                         <a href="#">
@@ -435,65 +437,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            centeredSlides: false,
-            slidesPerGroupSkip: 1,
-            grabCursor: true,
-            infinite: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-
-        const hamburger = document.querySelector(".hamburger");
-        const navUl = document.querySelector(".nav-ul");
-        const list = document.querySelectorAll(".nav-list");
-
-        hamburger.addEventListener('click', () => {
-            //Animate Links
-            navUl.classList.toggle("open");
-            list.forEach(link => {
-                link.classList.toggle("fade");
-            });
-
-            //Hamburger Animation
-            hamburger.classList.toggle("toggle");
-        });
-
-        let sec = document.querySelectorAll('section');
-        let links = document.querySelectorAll('nav a');
-
-        window.onscroll = () => {
-            sec.forEach(section => {
-                let top = window.scrollY;
-                let offset = section.offsetTop - 60;
-                let height = section.offsetHeight;
-                let id = section.getAttribute('id');
-
-                if (top >= offset && top < offset + height) {
-                    links.forEach(link => {
-                        link.classList.remove('active');
-                        document.querySelector('nav a[href*=' + id + ']').classList.add('active');
-                    })
-                }
-            })
-        };
-
-
-        const triggerTabList = document.querySelectorAll('#myTab a')
-        triggerTabList.forEach(triggerEl => {
-            const tabTrigger = new bootstrap.Tab(triggerEl)
-
-            triggerEl.addEventListener('click', event => {
-                event.preventDefault()
-                tabTrigger.show()
-            })
-        });
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
