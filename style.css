@@ -23,6 +23,10 @@ body {
     overflow-x: hidden;
 }
 
+.main-cont{
+    position: relative;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, a {
     margin: 0;
     padding: 0;
@@ -74,9 +78,9 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 .navbar-new {
     padding: 10px 10%;
-    width: 100vw;
+    width: 100%;
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 1000;
     background-color: #fff;
@@ -180,7 +184,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     .nav-ul {
         position: fixed;
         background: #131418;
-        height: 100vh;
+        height: 100%;
         width: 100%;
         flex-direction: column;
         clip-path: circle(50px at 90% -20%);
@@ -293,10 +297,9 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 /* home */
 #home {
-    margin-top: 90px;
     background: #EFF8FF;
-    width: 100vw;
-    /* height: 100vh; */
+    width: 100%;
+    height: 100%;
     padding: 0 10%;
     padding-right: 0;
     position: relative;
@@ -355,8 +358,8 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 #about {
     background: #fff;
-    width: 100vw;
-    /* height: 100vh; */
+    width: 100%;
+    /* height: 100%; */
     padding: 0 5%;
     position: relative;
     display: flex;
@@ -466,7 +469,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 /* programs ------------------------------------*/
 
 #programs {
-    width: 100vw;
+    width: 100%;
     /* height: 150vh; */
     padding: 0 5%;
     display: flex;
@@ -493,7 +496,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     top: -20%;
     left: 0;
     background: url(./Assets/programBanner.png);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
 }
@@ -562,7 +565,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 /* career ------------------------------------*/
 
 #career {
-    width: 100vw;
+    width: 100%;
     padding: 0 5%;
     position: relative;
     display: flex;
@@ -576,7 +579,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     width: 100%;
     height: 100%;
     background: url(./Assets/background.png);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     position: absolute;
@@ -682,8 +685,8 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 /* projects */
 #projects {
     margin-top: 50px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
@@ -727,7 +730,8 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 #projects .swiper {
     width: 80%;
-    height: 70vh;
+    height: 100%;
+    padding: 50px 0;
 }
 
 #projects .swiper-slide-active {
@@ -756,7 +760,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 #projects .card {
     width: 600px;
-    height: 400px;
+    height: 480px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -797,9 +801,9 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 /* clients-------------------------------------------- */
 #clients {
-    margin-top: 50px;
-    width: 100vw;
-    height: 100vh;
+    margin: 100px 0;
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
@@ -821,7 +825,8 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 #clients .swiper {
     width: 80%;
-    height: 70vh;
+    height: 100%;
+    padding: 80px 0;
 }
 
 #clients .swiper-slide-active {
@@ -915,10 +920,11 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 /* clients-------------------------------------------- */
 #events {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: relative;
     padding: 0 5%;
+    margin-bottom: 50px;
 }
 
 #events .container-new {
@@ -928,8 +934,13 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     column-gap: 10px;
 }
 
+
+
+#events .container-new .card-box {
+    width: auto;
+}
 #events .container-new img {
-    width: 330px;
+    width: 100%;
 }
 
 /* footer==================================== */
@@ -1356,7 +1367,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     }
 }
 
-@media screen and (max-width: 992px) and (min-width: 564px) {
+@media screen and (max-width: 1300px) and (min-width: 564px) {
     #home .container-new {
         display: flex;
         justify-content: center;
@@ -1655,5 +1666,17 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
     .footer .right h6 {
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-cont {
+        max-width: 1600px;
+        width: 90%;
     }
 }
