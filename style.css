@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-.main-cont{
+.main-cont {
     position: relative;
 }
 
@@ -932,6 +932,9 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     grid-template-columns: 0fr 0fr 0fr 0fr;
     gap: 10px;
     column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -939,6 +942,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 #events .container-new .card-box {
     width: 300px;
 }
+
 #events .container-new img {
     width: 100%;
 }
@@ -1670,11 +1674,12 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 }
 
 @media screen and (min-width: 1600px) {
-    body{
+    body {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .main-cont {
         max-width: 1600px;
         width: 90%;
