@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     margin-top: 90px;
     background: #EFF8FF;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 0 10%;
     padding-right: 0;
     position: relative;
@@ -345,19 +345,24 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 /* about */
 
+#about .right {
+    width: 50%;
+}
+
 #about .right img {
-    width: max-content;
+    width: 100%;
 }
 
 #about {
     background: #fff;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 0 5%;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 80px 0;
 }
 
 #about .container-new {
@@ -365,6 +370,11 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+}
+
+#about .left {
+    width: 50%;
+    margin-left: 50px;
 }
 
 #about .left h1 {
@@ -428,6 +438,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 .aboutUl {
     margin: 0;
     margin-top: 60px;
+    padding: 0;
 }
 
 .aboutUl li {
@@ -456,27 +467,15 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 #programs {
     width: 100vw;
-    height: 150vh;
+    /* height: 150vh; */
     padding: 0 5%;
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -120px;
     z-index: 11;
+    position: relative;
+    padding-top: 100px;
 }
-
-#programs .programs_background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(./Assets/programBanner.png);
-    background-size: auto;
-    background-repeat: no-repeat;
-}
-
 
 #programs .container-new {
     display: flex;
@@ -484,6 +483,19 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     align-items: center;
     width: 100%;
     z-index: 10;
+}
+
+#programs::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -20%;
+    left: 0;
+    background: url(./Assets/programBanner.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 #programs .left {
@@ -498,8 +510,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 }
 
 #programs .right .card-new {
-    width: 405px;
-    height: 324px;
+    width: auto;
     padding: 24px;
 }
 
@@ -552,13 +563,12 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 #career {
     width: 100vw;
-    height: 140vh;
     padding: 0 5%;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -150px;
+    margin-top: 50px;
 }
 
 #career::before {
@@ -570,7 +580,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     background-repeat: no-repeat;
     background-position: top;
     position: absolute;
-    top: -30%;
+    top: -40%;
     left: 0;
 }
 
@@ -716,7 +726,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 }
 
 #projects .swiper {
-    width: 100%;
+    width: 80%;
     height: 70vh;
 }
 
@@ -810,7 +820,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 }
 
 #clients .swiper {
-    width: 100%;
+    width: 80%;
     height: 70vh;
 }
 
@@ -1041,6 +1051,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
+        margin-bottom: 50px;
     }
 
     #home {
@@ -1083,6 +1094,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
     #about {
         height: max-content;
+        margin: 50px 0;
     }
 
     #about .left {
@@ -1092,6 +1104,8 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         justify-content: center;
         margin-top: 20px;
         padding: 0 5%;
+        width: 100%;
+        margin-left: 0;
     }
 
     #about .left h1 {
@@ -1119,6 +1133,11 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         padding-left: 0px;
         margin-top: 10px;
         position: relative;
+        width: 100%;
+    }
+
+    #about .right {
+        width: 100%;
     }
 
     #about .right img {
@@ -1150,6 +1169,11 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     #programs {
         margin-top: 50px;
         height: 100%;
+        padding-top: 0;
+    }
+
+    #programs::before {
+        top: 0;
     }
 
     #programs .left {
@@ -1233,6 +1257,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
     #projects .swiper {
         height: 100%;
+        width: 100%;
     }
 
     #projects .card .card-body {
@@ -1264,6 +1289,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     #clients .swiper {
         padding: 0 5%;
         height: 70vh;
+        width: 100%;
     }
 
     #clients .card .card-body {
@@ -1335,7 +1361,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         padding: 0;
     }
 
-    #programs .right .card-new p{
+    #programs .right .card-new p {
         font-size: 16px;
     }
 
