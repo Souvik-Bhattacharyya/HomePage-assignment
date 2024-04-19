@@ -937,7 +937,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 
 #events .container-new .card-box {
-    width: auto;
+    width: 300px;
 }
 #events .container-new img {
     width: 100%;
